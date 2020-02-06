@@ -1,2 +1,1 @@
-# Things
- Random stuff to tinker with
+Small side projects
