@@ -26,12 +26,10 @@ int main()
         for(int x = 0; x < 25; x++)
         {
           char b = char(rng());
-          outFile << b << " ";
-            
+          outFile << b << " " 
         }
         outFile << endl;
     }
-
     outFile.close();
     return 0;
 }
