@@ -26,7 +26,7 @@ int main()
     cout << "Average Age Calculator\nEnter the amount of people: ";
     cin >> a;
 
-    cout << fixed << showpoint << setprecision(2) << calc(a) << " is the average age.\n" << "Input anything to close.\n";
+    cout << fixed << showpoint << setprecision(2) << calc(a) << " is the average age.\n" << "Input anything to close." << endl;
     cin >> a;
 
     return 0;
