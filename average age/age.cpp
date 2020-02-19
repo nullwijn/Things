@@ -2,17 +2,22 @@
 #include <iomanip>
 
 using namespace std;
-//TODO: make an array, append it within the loop, calculate average of elements in the array.
+
 double calc(int a)
 {
-    int count;
+    int count = 1;
+    double total;
     for(int x = 0; x < a; x++)
     {
-        int age;
+        int b;  
         cout << "Enter age #" << count << ": ";
-        cin >> age;
+        cin >> b;
+
+        total = total+b;
+
         count++;
     }
+    return total/a;
 }
 int main()
 {
@@ -21,7 +26,7 @@ int main()
     cout << "Average Age Calculator\nEnter the amount of people: ";
     cin >> a;
 
-    calc(a);
+    cout << fixed << showpoint << setprecision(2) << calc(a) << " is the average age.";
 
     return 0;
 }
