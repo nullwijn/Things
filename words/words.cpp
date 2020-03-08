@@ -1,4 +1,4 @@
-//Creates 'art' out of random printable ASCII characters.
+//Makes a random word search. Actual words not guaranteed.
 #include <cstdlib>
 #include <random>
 #include <fstream>
@@ -10,7 +10,7 @@ default_random_engine dre (chrono::steady_clock::now().time_since_epoch().count(
 
 int rng()
 {
-    uniform_int_distribution<> distr(33, 90);
+    uniform_int_distribution<> distr(65, 90);
     return distr(dre);
 }
 int main()
@@ -19,14 +19,14 @@ int main()
 
     ofstream outFile;
 
-    outFile.open("art.txt");
+    outFile.open("words.txt");
 
     for (int x = 0; x < 25; x++)
     {
         for(int x = 0; x < 25; x++)
         {
           char b = char(rng());
-          outFile << b << " " 
+          outFile << b << " ";
         }
         outFile << endl;
     }
